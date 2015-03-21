@@ -1,3 +1,14 @@
+@import url(../fonts/exo2.0/stylesheet.css);
+@import url(../fonts/minionpro/minionpro.css);
+@import url(../fonts/neris/neris.css);
+@import url(../fonts/play/play.css);
+
+
+@color-yellow: #e9a13b;
+@font-base: 'exo_2.0light';
+@font-bold: 'exo_2.0semi_bold';
+
+
 /* Base styles
    ========================= */
 
@@ -12,66 +23,150 @@ button,
 input,
 select,
 textarea {
-	color: #222;
+	color: #ffffff;
+	font-family: @font-base;
 }
 
 html {
 	font-size: 1em;
-	line-height: 1.4;
+	line-height: 1.3;
 }
 
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
-}
 
 .container {
-	width: 1024px;
-	margin-right: auto;
+	width: 1170px;
 	margin-left: auto;
+	margin-right: auto;
 	position: relative;
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
 
-.header {
+.block-01 {
+	height: 950px;
+	padding: 50px 0;
+	background: url("../img/block-01_bg.jpg") top center no-repeat;
 
-	.header-logo {
-
-		top: 0;
-		left: 0;
-		position: absolute;
+	.top {
+		height: 180px;
 	}
 
-	.header-contact {
+	.topnav {
+		float: left;
+		width: 600px;
 
-		top: 0;
-		right: 0;
-		position: absolute;
+		li {
+			display: inline-block;
+			margin-right: 15px;
 
-		.contact-title {
+			a {
+				font-size: 14px;
+				line-height: 20px;
+				color: @color-yellow;
+				font-family: @font-bold;
+			}
+			a:hover {
+				color: @color-yellow + #222222;
+			}
 
 		}
+	}
+
+	.contact {
+		width: 220px;
+		height: 46px;
+		float: right;
+		text-align: right;
 
 		.phone {
-
+			color: #fff;
+			font: 28px/30px 'playregular';
+		}
+		.worktime {
+			font-size: 12px;
+			line-height: 16px;
+			color: @color-yellow;
 		}
 	}
 
-	.header-title {
+	.logo {
+		width: 159px;
+		height: 117px;
+		margin: 0 auto 85px auto;
+		background: url("../img/logo.png") 0 0 no-repeat;
+	}
 
+	h1 {
+		span {
+			display: block;
+		}
+		span.first {
+			font-size: 30px;
+		}
+		span.last {
+			font-size: 36px;
+		}
+	}
+
+	.benefit {
+		overflow: hidden;
+
+		li {
+			float: left;
+			width: 20%;
+		}
 	}
 }
+
+.block-02 {
+	height: 950px;
+	background: url("../img/block-02_bg.jpg") top center no-repeat;
+}
+
+.block-04 {
+	height: 950px;
+	background: url("../img/block-04_bg.jpg") top center no-repeat;
+}
+
+.block-05 {
+	height: 950px;
+	background: url("../img/block-05_bg.jpg") top center no-repeat;
+}
+
+.block-06 {
+	height: 950px;
+}
+
+.block-07 {
+	height: 950px;
+	background: url("../img/block-07_bg.jpg") top center no-repeat;
+}
+
+.block-08 {
+	height: 950px;
+	background: url("../img/block-08_bg.jpg") top center no-repeat;
+}
+
 
 
 /* Typography
    ========================= */
 
 h1, h2, h3, h4 {
+	font-weight: normal;
+	font-family: @color-yellow;
+}
 
+h1, {
+	font-size: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 50px;
 }
 
 p {
@@ -83,7 +178,7 @@ a {
 
 }
 
-nav ul {
+ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
