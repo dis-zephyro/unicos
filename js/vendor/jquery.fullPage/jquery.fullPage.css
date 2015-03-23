@@ -75,11 +75,13 @@ html, body {
 .fp-controlArrow.fp-prev {
     left: 15px;
     width: 0;
+	display: none;
     border-width: 38.5px 34px 38.5px 0;
     border-color: transparent #fff transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: 15px;
+	display: none;
     border-width: 38.5px 0 38.5px 34px;
     border-color: transparent transparent transparent #fff;
 }
@@ -148,18 +150,19 @@ html, body {
 .fp-slidesNav ul li:hover a.active span{
     height: 12px;
     width: 12px;
-    margin: -6px 0 0 -6px;
-    border-radius: 100%;
+	background: url("slide-up-dovn-yellow.png") 0 0 no-repeat;
  }
+
+
+
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
+    height: 8px;
+    width: 8px;
     border: 0;
-    background: #333;
+    background: url("slide-up-dovn-gray.png") 0 0 no-repeat;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -170,9 +173,7 @@ html, body {
 }
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
-    margin: -5px 0px 0px -5px;
+	background: url("slide-up-dovn-yellow.png") 0 0 no-repeat;
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
