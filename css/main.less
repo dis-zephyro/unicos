@@ -41,6 +41,10 @@ html {
 	position: relative;
 }
 
+.overflow {
+	overflow: hidden;
+}
+
 
 .block-01 {
 	height: 950px;
@@ -178,6 +182,7 @@ html {
 
 			li {
 				opacity: .3;
+				filter: alpha(Opacity=30);
 				float: left;
 				width: 450px;
 				height: 220px;
@@ -294,6 +299,7 @@ html {
 
 				h4 {
 					color: #fff;
+					height: auto;
 					margin-top: 20%;
 					margin-bottom: 60px;
 					padding-bottom: 15px;
@@ -313,34 +319,30 @@ html {
 		h4 {
 			margin-top: 20%;
 			color: #45454c;
+			height: 250px;
+		}
+
+		.symbol {
+			color: #a5a7ab;
+			font-size: 200px;
+			text-align: center;
+			display: block;
+			font-family: @font-extra;
 		}
 
 		p {
-			height: 200px;
+			height: 250px;
 			overflow: hidden;
 			font-size: 18px;
+			z-index: 10;
+			background: #071329;
 		}
 
 		.item-image {
-			left: 20px;
-			right: 20px;
-			bottom: 50px;
-			position: absolute;
 
 			img {
 				margin: 0 auto;
 			}
-		}
-
-		.symbol {
-			left: 20px;
-			right: 20px;
-			bottom: 50px;
-			color: #a5a7ab;
-			font-size: 200px;
-			text-align: center;
-			position: absolute;
-			font-family: @font-extra;
 		}
 	}
 }
@@ -352,8 +354,16 @@ html {
 
 	h2 {
 		text-align: center;
-		padding-top: 100px;
 		margin-bottom: 55px;
+	}
+
+	.page-center {
+		top:50%;
+		left: 0;
+		width: 100%;
+		height: 550px;
+		margin-top: -250px;
+		position: absolute;
 	}
 
 	.warranty {
@@ -506,7 +516,7 @@ html {
 			}
 		}
 
-		li:hover {
+		li.active {
 			width: 428px;
 			height: 93px;
 			margin-right: 0;
@@ -544,6 +554,12 @@ html {
 	position: relative;
 	background: #222222;
 
+	.slides {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
 	.nav-box {
 		bottom: 0;
 		z-index: 10;
@@ -556,6 +572,8 @@ html {
 	}
 
 	.slide {
+		width: 100%;
+		height: 100%;
 		position: relative;
 
 		.slide-text {
@@ -718,6 +736,8 @@ html {
 		padding: 50px;
 		margin-top: -200px;
 		position: absolute;
+		border: 1px solid #7e808a;
+		background: url("../img/bg-form.png");
 	}
 
 	.footer {
@@ -1120,6 +1140,7 @@ ul {
 @media (max-width: 1600px) {
 
 	.block-03 .service h4 {
+		height: 200px;
 		font-size: 20px;
 	}
 

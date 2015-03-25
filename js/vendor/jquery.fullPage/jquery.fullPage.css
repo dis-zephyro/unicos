@@ -177,10 +177,10 @@ html, body {
 }
 #fp-nav ul li .fp-tooltip {
     position: absolute;
-    top: -2px;
-    color: #fff;
+    top: 0;
+    color: #e9a13b;
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+	font-family: 'exo_2.0light';
     white-space: nowrap;
     max-width: 220px;
     overflow: hidden;

@@ -28,6 +28,9 @@ html {
   margin-right: auto;
   position: relative;
 }
+.overflow {
+  overflow: hidden;
+}
 .block-01 {
   height: 950px;
   background: url("../img/block-01_bg.jpg") top center no-repeat;
@@ -148,6 +151,7 @@ html {
 }
 .block-02 .mini-slider .stick li {
   opacity: .3;
+  filter: alpha(opacity=30);
   float: left;
   width: 450px;
   height: 220px;
@@ -247,6 +251,7 @@ html {
 }
 .block-03 .service li .out h4 {
   color: #fff;
+  height: auto;
   margin-top: 20%;
   margin-bottom: 60px;
   padding-bottom: 15px;
@@ -261,30 +266,24 @@ html {
 .block-03 .service h4 {
   margin-top: 20%;
   color: #45454c;
-}
-.block-03 .service p {
-  height: 200px;
-  overflow: hidden;
-  font-size: 18px;
-}
-.block-03 .service .item-image {
-  left: 20px;
-  right: 20px;
-  bottom: 50px;
-  position: absolute;
-}
-.block-03 .service .item-image img {
-  margin: 0 auto;
+  height: 250px;
 }
 .block-03 .service .symbol {
-  left: 20px;
-  right: 20px;
-  bottom: 50px;
   color: #a5a7ab;
   font-size: 200px;
   text-align: center;
-  position: absolute;
+  display: block;
   font-family: 'exo_2.0extra_light';
+}
+.block-03 .service p {
+  height: 250px;
+  overflow: hidden;
+  font-size: 18px;
+  z-index: 10;
+  background: #071329;
+}
+.block-03 .service .item-image img {
+  margin: 0 auto;
 }
 .block-04 {
   height: 950px;
@@ -293,8 +292,15 @@ html {
 }
 .block-04 h2 {
   text-align: center;
-  padding-top: 100px;
   margin-bottom: 55px;
+}
+.block-04 .page-center {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  margin-top: -250px;
+  position: absolute;
 }
 .block-04 .warranty {
   overflow: hidden;
@@ -425,7 +431,7 @@ html {
   display: table-cell;
   vertical-align: middle;
 }
-.block-05 .advantages li:hover {
+.block-05 .advantages li.active {
   width: 428px;
   height: 93px;
   margin-right: 0;
@@ -434,7 +440,7 @@ html {
   background: url("../img/pattern03.png");
   border: 1px solid #6b6973;
 }
-.block-05 .advantages li:hover .num {
+.block-05 .advantages li.active .num {
   float: left;
   width: 79px;
   height: 35px;
@@ -445,7 +451,7 @@ html {
   border-right: 1px solid #5e636b;
   font-family: 'exo_2.0extra_light';
 }
-.block-05 .advantages li:hover .text {
+.block-05 .advantages li.active .text {
   color: #fff;
   height: 36px;
   font-size: 18px;
@@ -456,6 +462,11 @@ html {
   height: 950px;
   position: relative;
   background: #222222;
+}
+.block-06 .slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 .block-06 .nav-box {
   bottom: 0;
@@ -468,6 +479,8 @@ html {
   border-top: 1px solid #352c2a;
 }
 .block-06 .slide {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .block-06 .slide .slide-text {
@@ -606,6 +619,8 @@ html {
   padding: 50px;
   margin-top: -200px;
   position: absolute;
+  border: 1px solid #7e808a;
+  background: url("../img/bg-form.png");
 }
 .block-08 .footer {
   left: 0;
@@ -934,6 +949,7 @@ ul {
 }
 @media (max-width: 1600px) {
   .block-03 .service h4 {
+    height: 200px;
     font-size: 20px;
   }
   .block-03 .service p {
