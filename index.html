@@ -14,12 +14,30 @@
         <!--link rel="stylesheet" type="text/css" href="js/vendor/jquery.fullPage/jquery.fullPage.css" /-->
         <link rel="stylesheet" type="text/css" href="js/vendor/jQueryFormStyler/jquery.formstyler.css" />
         <link rel="stylesheet" type="text/css" href="js/vendor/slick/slick.css" />
+
+        <link rel="stylesheet" type="text/css" href="js/vendor/owl-carousel/owl.carousel.css" />
+
+
         <link rel="stylesheet/less" href="css/main.less">
         <script src="js/vendor/less.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
     </head>
-    
+
     <body>
+    <div class="preloader-inner" id="preloader">
+        <div class="wrap">
+            <div class="preloader">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <p>Loading...</p>
+                <div class="double_bounce1"></div>
+                <div class="double_bounce2"></div>
+            </div>
+        </div>
+    </div>
         <div id="page">
             <section class="section block-01">
                 <div class="container">
@@ -240,22 +258,23 @@
 
             </section>
             <section class="section block-06">
-                <div class="slides">
-                    <div class="slide slide-01">
-                        <div class="slide-text">Мы довольны сотрудничеством с разработчиками. В настоящее время с компанией «Юникос» заключен договор на техническое сопровождение и развитие пожарных систем.</div>
-                    </div>
-                    <div class="slide slide-02">
-                        <div class="slide-text">Мы довольны сотрудничеством с разработчиками. В настоящее время с компанией «Юникос» заключен договор на техническое сопровождение и развитие пожарных систем.</div>
+                <div class="slider-inner">
+                    <div class="slider-box">
+                        <ul class="slider">
+                            <li>Мы довольны сотрудничеством с разработчиками. В настоящее время с компанией «Юникос» заключен договор на техническое сопровождение и развитие пожарных систем.</li>
+                            <li>Мы довольны сотрудничеством с разработчиками. В настоящее время с компанией «Юникос» заключен договор на техническое сопровождение и развитие пожарных систем.</li>
+                            <li>Мы довольны сотрудничеством с разработчиками. В настоящее время с компанией «Юникос» заключен договор на техническое сопровождение и развитие пожарных систем.</li>
 
+                        </ul>
                     </div>
-                </div>
-                <div class="nav-box">
-                    <div class="slide-nav-block clearfix">
-                        <span class="slide-nav prev page-prev"></span>
-                        <span class="slide-nav next page-next"></span>
+                    <div class="nav-box">
+                        <div class="slide-nav-block clearfix">
+                            <span class="slide-nav prev page-prev"></span>
+                            <span class="slide-nav next page-next"></span>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </section>
             <section class="section block-07">
                 <div class="container">
@@ -372,12 +391,11 @@
                                 <option>Система 6</option>
                             </select>
                         </li>
-                        <li>
-                            <div class="fileform">
-                                <div class="btn-file"><span>Прикрепите план здания (БТИ)</span></div>
-                                <div class="fileformlabel" id="fileformlabel"></div>
-                                <input type="file" name="upload" class="upload" onchange="getName(this.value);" />
-                            </div>
+                        <li id="li--4">
+                            <label for="cf_uploadfile8-4">
+                                <span>Прикрепите план здания (БТИ</span>
+                            </label>
+                            <input type="file" name="cf_uploadfile8[]" id="cf_uploadfile8-4" class="cf_upload upload">
                         </li>
                     </ol>
                     <p class="cf-sb">
@@ -390,6 +408,8 @@
 
 
 
+
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery.fancybox/jquery.fancybox.pack.js"></script>
@@ -397,6 +417,7 @@
         <script type="text/javascript" src="js/vendor/jquery.fullPage/jquery.fullPage.min.js"></script>
         <script type="text/javascript" src="js/vendor/jQueryFormStyler/jquery.formstyler.min.js"></script>
         <script type="text/javascript" src="js/vendor/slick/slick.min.js"></script>
+        <script src="js/vendor/owl-carousel/owl.carousel.js"></script>
 
         <script src="js/main.js"></script>
 

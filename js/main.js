@@ -1,6 +1,13 @@
+
 $(document).ready(function() {
 
-    // Анимация
+
+    $(window).bind('load', function() {
+        $("#preloader").fadeOut();
+        $("#preloader").delay(2000).fadeOut("slow");
+    });
+
+   // Анимация
     var Android = navigator.userAgent.search(/Android/i);
     var iPhone = navigator.userAgent.search(/iPhone/i);
     var iPad = navigator.userAgent.search(/iPad/i);
@@ -12,31 +19,17 @@ $(document).ready(function() {
 
         $('head').append('<link rel="stylesheet" type="text/css" href="js/vendor/jquery.fullPage/jquery.fullPage.css" />'); //подключение файла jquery.fullPage.css если не мобильник
 
-
-        function initialization(){
-            $('#page').fullpage({
-                css3: true,
-                verticalCentered: false,
-                navigation: true,
-                slidesNavigation: false,
-                navigationPosition: 'right',
-                showActiveTooltip: true,
-                responsive: 980,
-                navigationTooltips: ['Главная', 'Экономия', 'Услуги', 'Гарантии', 'Преимущества', 'Отзывы', 'Как мы работаем', 'Акция']
-            });
-        }
-
-        initialization();
-
-        $('.next').click(function(e){
-            e.preventDefault();
-            $.fn.fullpage.moveSlideRight();
+        $('#page').fullpage({
+            css3: true,
+            verticalCentered: false,
+            navigation: true,
+            slidesNavigation: false,
+            navigationPosition: 'right',
+            showActiveTooltip: true,
+            responsive: 980,
+            navigationTooltips: ['Главная', 'Экономия', 'Услуги', 'Гарантии', 'Преимущества', 'Отзывы', 'Как мы работаем', 'Акция']
         });
 
-        $('.page-prev').click(function(e){
-            e.preventDefault();
-            $.fn.fullpage.moveSlideLeft();
-        });
     }
 
 });
@@ -52,6 +45,23 @@ $('.stick').slick({
     prevArrow: '<span class="slide-nav prev mini-prev"></span>',
     nextArrow: '<span class="slide-nav next mini-next"></span>'
 });
+
+
+var slider = $('.slider');
+slider.owlCarousel({
+    loop:true,
+    margin:10,
+    items: 1
+});
+
+$('.page-next').click(function() {
+    slider.trigger('next.owl.carousel');
+});
+
+$('.page-prev').click(function() {
+    slider.trigger('prev.owl.carousel');
+});
+
 
 
 $(".advantages li").hover(
