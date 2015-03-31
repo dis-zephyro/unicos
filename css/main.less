@@ -161,9 +161,12 @@ body {
 	background: url("../img/block-02_bg.jpg") top center no-repeat;
 	background-size: cover;
 
+	.container {
+		height: 100%;
+	}
+
 	h2 {
 		margin-left: 395px;
-		padding-top: 120px;
 		margin-bottom: 50px;
 
 		span {
@@ -175,8 +178,12 @@ body {
 	}
 
 	.inner {
-		margin-left: 395px;
-
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 550px;
+		margin-top: -275px;
+		position: absolute;
 	}
 
 	.mini-slider {
@@ -566,6 +573,13 @@ body {
 	background: url("../img/block-06_slide-01.jpg") left top no-repeat;
 	background-size: cover;
 
+	.container0 {
+		width: 970px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+
 	.slider-inner {
 		z-index: 10;
 		right: 175px;
@@ -935,7 +949,8 @@ body {
 	}
 }
 
-.fileform {
+
+.cform li:last-child {
 	width: 100%;
 	height: 30px;
 	color: #3d3e54;
@@ -945,58 +960,16 @@ body {
 	text-align: center;
 	position: relative;
 
-	span {
-		display: inline-block;
-		border-bottom: 1px dashed #3d3e54;
-	}
-
-	.fileformlabel {
+	label {
 		width: 100%;
 		height: 30px;
-		display: none;
-		overflow: hidden;
-		text-align: left;
-	}
-
-	.upload{
-		position:absolute;
-		top:0;
-		left:0;
-		width:100%;
-		-moz-opacity: 0;
-		filter: alpha(opacity=0);
-		opacity: 0;
-		font-size: 150px;
-		height: 50px;
-		z-index:20;
-		cursor: pointer;
-	}
-
-	.btn2 {
+		text-align: center;
 		display: block;
-		overflow:hidden;
-		position:relative;
-	}
-
-}
-
-
-#li--4 {
-	width: 100%;
-	height: 30px;
-	color: #3d3e54;
-	margin: 0 auto;
-	cursor: pointer;
-	overflow: hidden;
-	text-align: center;
-	position: relative;
-
-	.fileformlabel {
-		width: 100%;
-		height: 30px;
-		display: none;
 		overflow: hidden;
-		text-align: left;
+
+		span {
+			border-bottom: 1px dashed #071329;
+		}
 	}
 
 	input[type="file"] {
@@ -1018,9 +991,16 @@ body {
 
 #consultation{
 	width: 410px;
-	height: 400px;
+	height: 500px;
 	padding: 50px;
 	background: #d2d0ce;
+
+	.form-header {
+		text-align: center;
+		font: 22px/30px @font-bold;
+		text-transform: uppercase;
+
+	}
 }
 
 .btn,

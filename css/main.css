@@ -132,9 +132,11 @@ body {
   background: url("../img/block-02_bg.jpg") top center no-repeat;
   background-size: cover;
 }
+.block-02 .container {
+  height: 100%;
+}
 .block-02 h2 {
   margin-left: 395px;
-  padding-top: 120px;
   margin-bottom: 50px;
 }
 .block-02 h2 span {
@@ -144,7 +146,12 @@ body {
   font-family: 'exo_2.0extra_light';
 }
 .block-02 .inner {
-  margin-left: 395px;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  margin-top: -275px;
+  position: absolute;
 }
 .block-02 .mini-slider {
   width: 900px;
@@ -476,6 +483,12 @@ body {
   background: url("../img/block-06_slide-01.jpg") left top no-repeat;
   background-size: cover;
 }
+.block-06 .container0 {
+  width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
 .block-06 .slider-inner {
   z-index: 10;
   right: 175px;
@@ -788,7 +801,7 @@ body {
   display: block;
   width: 100%;
 }
-.fileform {
+.cform li:last-child {
   width: 100%;
   height: 30px;
   color: #3d3e54;
@@ -798,53 +811,17 @@ body {
   text-align: center;
   position: relative;
 }
-.fileform span {
-  display: inline-block;
-  border-bottom: 1px dashed #3d3e54;
-}
-.fileform .fileformlabel {
+.cform li:last-child label {
   width: 100%;
   height: 30px;
-  display: none;
-  overflow: hidden;
-  text-align: left;
-}
-.fileform .upload {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  -moz-opacity: 0;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  font-size: 150px;
-  height: 50px;
-  z-index: 20;
-  cursor: pointer;
-}
-.fileform .btn2 {
+  text-align: center;
   display: block;
   overflow: hidden;
-  position: relative;
 }
-#li--4 {
-  width: 100%;
-  height: 30px;
-  color: #3d3e54;
-  margin: 0 auto;
-  cursor: pointer;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
+.cform li:last-child label span {
+  border-bottom: 1px dashed #071329;
 }
-#li--4 .fileformlabel {
-  width: 100%;
-  height: 30px;
-  display: none;
-  overflow: hidden;
-  text-align: left;
-}
-#li--4 input[type="file"] {
+.cform li:last-child input[type="file"] {
   position: absolute;
   top: 0;
   left: 0;
@@ -859,9 +836,14 @@ body {
 }
 #consultation {
   width: 410px;
-  height: 400px;
+  height: 500px;
   padding: 50px;
   background: #d2d0ce;
+}
+#consultation .form-header {
+  text-align: center;
+  font: 22px/30px 'exo_2.0semi_bold';
+  text-transform: uppercase;
 }
 .btn,
 .sendbutton {

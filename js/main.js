@@ -75,24 +75,20 @@ $(".advantages li").hover(
 );
 
 
-/* Поле отправки файла */
+$('#li--4').click(function() {
+	setTimeout("$('#li--4 span').replaceWith('файл прикреплен')", 2000);
+ 
+});
 
-function getName (str){
-    if (str.lastIndexOf('\\')){
-        var i = str.lastIndexOf('\\')+1;
-    }
-    else{
-        var i = str.lastIndexOf('/')+1;
-    }
-    var filename = str.slice(i);
-    var uploaded = document.getElementById("fileformlabel");
-    uploaded.innerHTML = filename;
-}
+$('#li--5').click(function() {
+    setTimeout("$('#li--5 span').replaceWith('файл прикреплен')", 2000);
+
+});
+
+
 
 (function($) {
     $(function() {
-
         $('select').styler();
-
     });
 })(jQuery);
